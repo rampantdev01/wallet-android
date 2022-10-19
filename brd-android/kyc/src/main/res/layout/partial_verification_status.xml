@@ -16,7 +16,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:padding="8dp"
         android:src="@drawable/ic_question_mark"
-        android:tint="@color/light_inverse_icons_01"
+        android:tint="@color/light_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,8 +47,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/ProfileStatusView.accountLimits"
-        android:textAllCaps="true"
-        android:textColor="@color/light_inverse_text_01"
+        android:textColor="@color/light_secondary"
         app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toEndOf="@id/btn_verify_account"
         app:layout_constraintHorizontal_bias="0"
@@ -66,7 +65,7 @@
         android:layout_marginEnd="16dp"
         android:lineSpacingExtra="4sp"
         android:text="@string/ProfileStatusView.getFullAccess"
-        android:textColor="@color/light_inverse_text_01"
+        android:textColor="@color/light_text_01"
         app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -89,6 +88,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_subtitle" />
 
     <com.google.android.material.button.MaterialButton
+        android:textAllCaps="true"
         android:id="@+id/btn_upgrade_limits"
         style="@style/FabriikButtonStyle.Dense"
         android:layout_width="0dp"
