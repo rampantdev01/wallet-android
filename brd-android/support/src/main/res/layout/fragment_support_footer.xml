@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/footerGroup"
+        android:orientation="vertical"
+        android:background="#303030"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+        <TextView
+            android:id="@+id/privacyLink"
+            android:text="Privacy Policy"
+            android:gravity="center_horizontal"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/separator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="|"/>
+
+            <TextView
+                android:autoLink="phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1-833-322-7445"
+                android:gravity="center"
+                android:layout_marginEnd="24dp"
+                android:textColorLink="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:layout_toStartOf="@+id/separator"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/email"
+                android:textColorLink="#FFFFFF"
+                android:autoLink="email"
+                android:gravity="center"
+                android:layout_marginStart="24dp"
+                android:text="hello@fabriik.com"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/separator"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="5.10.6 - English"
+            android:id="@+id/versionNumber"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</merge>

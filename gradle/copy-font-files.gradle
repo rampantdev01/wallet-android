@@ -1,0 +1,19 @@
+afterEvaluate {
+    def fontResDir = rootProject.file("brd-android/theme/src/main/res/font")
+    def needsFontFiles = fontResDir.listFiles().length == 1 // mobile_font.xml
+    if (needsFontFiles) {
+        def fontFolder = rootProject.file("brd-android/mobile-font-default")
+        def isFontCheckedOut = rootProject.file("external/mobile-font/README.md").exists()
+        if (isFontCheckedOut) {
+            fontFolder = rootProject.file("external/mobile-font")
+        }
+
+        copy {
+            from(fontFolder) {
+                include '**/*.ttf'
+                include '**/*.otf'
+            }
+            into fontResDir
+        }
+    }
+}

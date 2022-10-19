@@ -1,0 +1,151 @@
+# Java Gradle CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-java/ for more details
+#
+defaults: &defaults
+  docker:
+    - image: circleci/android:api-30-ndk
+  working_directory: ~/brd-mobile
+  resource_class: large
+
+  environment:
+    SDK_FILENAME: sdk-tools-linux-4333796.zip
+    ANDROID_HOME: /opt/android/sdk
+
+version: 2.1
+
+commands:
+  # Default init command
+  default-project-setup:
+    steps:
+      - checkout
+      - pull-submodules
+      - refresh-gradle
+
+  # Pull submodules command
+  pull-submodules:
+    steps:
+      # Pull submodules
+      - run:
+          name: Pull submodules
+          command: |
+            git submodule update --init --recursive
+  # Refresh gradle command
+  refresh-gradle:
+    steps:
+      # Restore cache - Gradle
+      - restore_cache:
+          name: Restoring cache - Gradle
+          keys:
+            - v1-dependencies-{{ checksum "brd-android/build.gradle.kts" }}-{{ checksum "brd-android/app/build.gradle.kts" }}
+
+      # Refresh gradle
+      #      - run:
+      #          name: Refresh gradle
+      #          command: |
+      #            ./gradlew  dependencies
+
+      # save cache - Gradle
+      - save_cache:
+          name: Saving cache - Gradle
+          key: v1-dependencies-{{ checksum "brd-android/build.gradle.kts" }}-{{ checksum "brd-android/app/build.gradle.kts" }}
+          paths:
+            - ~/.gradle
+
+orbs:
+  node: circleci/node@5.0.2
+jobs:
+  # Test job (run tests & generate Jacoco report)
+  test:
+    <<: *defaults
+    steps:
+      # Setup project
+      - default-project-setup
+      # Unit tests
+      - run:
+          name: Run unit tests
+          command: |
+            ./gradlew  --console=plain  testDevelopmentTestnetDebugUnitTest
+      # Generate Jacoco report
+      - run:
+          name: Generate Jacoco report
+          command: |
+            ./gradlew  --console=plain :brd-android:app:jacocoTestReport
+  # Release job (build apk and aab)
+  release:
+    <<: *defaults
+    steps:
+      # Setup project
+      - default-project-setup
+      - node/install
+      # Prepare keystore
+      - run:
+          name: Ensure env is set
+          command: |
+            echo "CIRCLE_TAG = $CIRCLE_TAG"
+            echo "CI_COMMIT_TAG = $CIRCLE_TAG"
+      - run:
+          name: Prepare keystore
+          command: |
+            mkdir /home/circleci/key
+            echo $release_keystore > /home/circleci/key/base64
+            base64 -d /home/circleci/key/base64 > /home/circleci/key/keystore
+            ls -la /home/circleci/key
+      - run:
+          name: Build release apk - ProductionMainnet
+          command: |
+            ./gradlew --console=plain brd-android:app:assembleProductionMainnetRelease
+      - run:
+          name: Build debug apk - ProductionMainnet
+          command: |
+            ./gradlew --console=plain brd-android:app:assembleProductionMainnetDebug
+      - run:
+          name: Build release apk - StagingMainnet
+          command: |
+            ./gradlew --console=plain brd-android:app:assembleStagingMainnetRelease
+      - run:
+          name: Build debug apk - StagingMainnet
+          command: |
+            ./gradlew --console=plain brd-android:app:assembleStagingMainnetDebug
+      - run:
+          name: Build release apk - DevelopmentMainnet
+          command: |
+            ./gradlew --console=plain brd-android:app:assembleDevelopmentMainnetRelease
+      - run:
+          name: Build debug apk - DevelopmentMainnet Debug
+          command: |
+            ./gradlew --console=plain brd-android:app:assembleDevelopmentMainnetDebug
+      # Prepare artifacts
+      - run:
+          name: Prepare artifacts
+          command: |
+            mkdir -p ~/artifacts
+            cp -r ./brd-android/app/build/outputs/apk/productionMainnet/release ~/artifacts;
+             cp -r ./brd-android/app/build/outputs/apk/productionMainnet/debug ~/artifacts;
+            cp -r ./brd-android/app/build/outputs/apk/developmentMainnet/release ~/artifacts;
+            cp -r ./brd-android/app/build/outputs/apk/developmentMainnet/debug ~/artifacts;
+            cp -r ./brd-android/app/build/outputs/apk/stagingMainnet/release ~/artifacts;
+            cp -r ./brd-android/app/build/outputs/apk/stagingMainnet/debug ~/artifacts;
+          when: always
+      - store_artifacts:
+          path: ~/artifacts
+workflows:
+  test:
+    jobs:
+      - test
+  test_and_build:
+    jobs:
+      - test:
+          filters:
+            tags:
+              only: /release-\d+.\d+.\d+.\d+/
+            branches:
+              ignore: /.*/
+      - release:
+          filters:
+            tags:
+              only: /release-\d+.\d+.\d+.\d+/
+            branches:
+              ignore: /.*/
+          requires:
+            - test

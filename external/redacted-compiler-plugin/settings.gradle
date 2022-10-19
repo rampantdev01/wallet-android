@@ -1,0 +1,22 @@
+pluginManagement {
+  resolutionStrategy {
+    eachPlugin {
+      if (requested.id.id == "binary-compatibility-validator") {
+        useModule("org.jetbrains.kotlinx:binary-compatibility-validator:${requested.version}")
+      }
+    }
+  }
+}
+
+rootProject.name = 'redacted-compiler-plugin'
+include ':redacted-compiler-plugin-gradle'
+include ':redacted-compiler-plugin'
+include ':redacted-compiler-plugin-annotations'
+// TODO re-enable with uploaded version
+//include ':sample'
+
+//includeBuild('redacted-compiler-gradle-plugin') {
+//  dependencySubstitution {
+//    substitute module('dev.zacsweers.redacted:redacted-compiler-plugin-gradle') with project(':')
+//  }
+//}
