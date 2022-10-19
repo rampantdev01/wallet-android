@@ -242,6 +242,7 @@ class SwapInputFragment : Fragment(),
                     SwapInputFragmentDirections.actionAssetSelection(
                         requestKey = REQUEST_KEY_SOURCE_SELECTION,
                         currencies = effect.currencies.toTypedArray(),
+                        title = getString(R.string.Swap_youSend)
                     )
                 )
             }
@@ -252,6 +253,7 @@ class SwapInputFragment : Fragment(),
                     SwapInputFragmentDirections.actionAssetSelection(
                         requestKey = REQUEST_KEY_DESTINATION_SELECTION,
                         currencies = effect.currencies.toTypedArray(),
+                        title = getString(R.string.Swap_youReceive)
                     )
                 )
             }

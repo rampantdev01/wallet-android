@@ -20,6 +20,7 @@ interface AssetSelectionContract {
     }
 
     data class State(
+        val title: String,
         val search: String = "",
         val assets: List<AssetSelectionAdapter.AssetSelectionItem> = emptyList(),
         val adapterItems: List<AssetSelectionAdapter.AssetSelectionItem> = emptyList(),

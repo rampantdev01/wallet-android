@@ -87,6 +87,7 @@ class AssetSelectionFragment : Fragment(),
 
     override fun render(state: AssetSelectionContract.State) {
         adapter.submitList(state.adapterItems)
+        binding.toolbar.setTitle(state.title)
         binding.loadingIndicator.isVisible = state.initialLoadingVisible
     }
 

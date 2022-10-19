@@ -246,6 +246,7 @@ We are sorry to see you go.</string>
     <string name="Buy.FailureTransactionMessage">Please contact your card issuer/bank or try again with a different payment method.</string>
     <!-- First Name label in billing address view on buy flow -->
     <string name="Buy.FirstName">First Name</string>
+    <string name="Buy.iWant">I want</string>
     <string name="Buy.InvalidExpirationDate">Entered expiration date is not valid!</string>
     <!-- Last Name label in billing address view on buy flow -->
     <string name="Buy.LastName">Last Name</string>
@@ -1312,6 +1313,8 @@ We are sorry to see you go.</string>
     <string name="Swap.Swapping">Swapping %1$s/%2$s</string>
     <!-- Swap status message on swap flow -->
     <string name="Swap.SwapStatus">Your %s is estimated to arrive in 30 minutes. You can continue to use your wallet. We\'ll let you know when your swap has finished.</string>
+    <string name="Swap.youSend">You send</string>
+    <string name="Swap.youReceive">You receive</string>
     <string name="Swap.temporarilyUnavailable">Swap is temporarily unavailable</string>
     <!-- Timestamp label in swap details screen -->
     <string name="Swap.Timestamp">Timestamp</string>

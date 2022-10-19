@@ -21,7 +21,7 @@ class FabriikToolbar @JvmOverloads constructor(
 ) : AppBarLayout(context, attrs) {
 
     private val defaultTintColor = ContextCompat.getColor(
-        context, R.color.light_icons_01
+        context, R.color.light_text_03
     )
 
     private val binding: PartialFabriikToolbarBinding

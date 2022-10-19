@@ -33,7 +33,9 @@ class AssetSelectionViewModel(
         )
     }
 
-    override fun createInitialState() = AssetSelectionContract.State()
+    override fun createInitialState() = AssetSelectionContract.State(
+        title = arguments.title
+    )
 
     override fun onBackClicked() {
         setEffect {

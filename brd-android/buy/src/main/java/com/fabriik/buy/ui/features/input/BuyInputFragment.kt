@@ -172,6 +172,7 @@ class BuyInputFragment : Fragment(),
                     BuyInputFragmentDirections.actionAssetSelection(
                         requestKey = REQUEST_KEY_CRYPTO_SELECTION,
                         currencies = effect.currencies.toTypedArray(),
+                        title = getString(R.string.Buy_iWant)
                     )
                 )
 
