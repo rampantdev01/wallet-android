@@ -38,14 +38,15 @@
 
     <style name="FabriikButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:minHeight">0dp</item>
-        <item name="android:padding">12dp</item>
+        <item name="android:padding">18dp</item>
         <item name="android:insetTop">0dp</item>
         <item name="android:insetBottom">0dp</item>
         <item name="android:textColor">@color/light_contrast_02</item>
+        <item name="android:textAllCaps">true</item>
         <item name="android:textAppearance">@style/TextStyle.Button</item>
         <item name="rippleColor">@color/light_interaction_primary_pressed</item>
         <item name="backgroundTint">@color/bg_button_tint</item>
-        <item name="cornerRadius">12dp</item>
+        <item name="cornerRadius">100dp</item>
     </style>
 
     <style name="FabriikButtonStyle.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -57,7 +58,7 @@
         <item name="android:textAppearance">@style/TextStyle.Button</item>
         <item name="strokeColor">@color/light_primary</item>
         <item name="rippleColor">@color/light_tertiary</item>
-        <item name="cornerRadius">12dp</item>
+        <item name="cornerRadius">100dp</item>
     </style>
 
     <style name="FabriikButtonStyle.Icon">
@@ -121,7 +122,7 @@
         <item name="android:foreground">@drawable/bg_input_view</item>
         <item name="android:textColorHint">@color/til_hint_expanded_tint</item>
         <item name="hintTextColor">@color/til_hint_collapsed_tint</item>
-        <item name="hintTextAppearance">@style/TextStyle.Caption</item>
+        <item name="hintTextAppearance">@style/TextStyle.Body3</item>
         <item name="boxStrokeColor">@android:color/transparent</item>
         <item name="boxStrokeWidth">0dp</item>
         <item name="boxStrokeWidthFocused">0dp</item>
