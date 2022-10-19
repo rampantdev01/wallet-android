@@ -5,7 +5,6 @@ import com.fabriik.common.ui.base.FabriikContract
 interface SwapAuthenticationContract {
 
     sealed class Event : FabriikContract.Event {
-        object BackClicked : Event()
         object DismissClicked : Event()
         object AuthSucceeded : Event()
         data class AuthFailed(val errorCode: Int) : Event()
@@ -13,7 +12,6 @@ interface SwapAuthenticationContract {
     }
 
     sealed class Effect : FabriikContract.Effect {
-        object Dismiss : Effect()
         object ShakeError : Effect()
         data class Back(val resultKey: String) : Effect()
     }
