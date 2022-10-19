@@ -36,6 +36,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/VerifyPin.continueBody"
+        android:textColor="@color/light_text_02"
         app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
