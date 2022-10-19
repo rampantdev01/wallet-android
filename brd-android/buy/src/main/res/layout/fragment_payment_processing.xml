@@ -25,13 +25,14 @@
 
         <TextView
             android:id="@+id/tv_title"
-            style="@style/TextStyle.Title5"
+            style="@style/TextStyle.Title6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="28dp"
-            app:layout_constrainedWidth="true"
+            android:layout_marginTop="40dp"
             android:gravity="center"
+            android:textColor="@color/light_text_03"
+            app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toTopOf="@id/tv_description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,13 +41,12 @@
 
         <TextView
             android:id="@+id/tv_description"
-            style="@style/TextStyle.Body1"
+            style="@style/TextStyle.Body2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:gravity="center"
-            android:lineSpacingExtra="5sp"
             android:textColor="@color/light_text_02"
             app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toTopOf="@+id/btn_home"
@@ -104,10 +104,10 @@
         android:id="@+id/content_processing"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/light_primary"
+        android:background="@color/light_disabled_02"
         android:gravity="center"
         android:orientation="vertical"
-        tools:visibility="visible">
+        tools:visibility="gone">
 
         <com.google.android.material.progressindicator.CircularProgressIndicator
             android:id="@+id/initial_loading_indicator"
@@ -116,13 +116,13 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            style="@style/TextStyle.Title5"
+            style="@style/TextStyle.Title6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="24dp"
             android:text="@string/Buy.ProcessingPayment"
-            android:textColor="@color/white" />
+            android:textColor="@color/light_contrast_02" />
 
     </LinearLayout>
 </FrameLayout>

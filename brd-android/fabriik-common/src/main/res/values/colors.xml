@@ -43,12 +43,13 @@
     <color name="light_inverse_outline_03">#9AA0A6</color>
     <color name="light_inverse_icons_01">#FFFFFF</color>
     <color name="light_inverse_icons_02">#DADCE0</color>
+    <color name="light_disabled_02">#C7C7C5</color>
 
     <!-- Interaction colors -->
     <color name="light_interaction_primary_hover">#559085</color>
     <color name="light_interaction_primary_pressed">#559085</color>
     <color name="light_interaction_primary_selected">#559085</color>
     <color name="light_interaction_primary_focused">#6EAEA1</color>
-    <color name="light_interaction_primary_disabled">#C5DFD9</color>
+    <color name="light_interaction_primary_disabled">@color/light_disabled_02</color>
     <color name="light_interaction_listing_hover">#F1F3F4</color>
 </resources>
