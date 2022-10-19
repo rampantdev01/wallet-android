@@ -7,11 +7,11 @@
     <color name="light_background_02">#F1F3F4</color>
     <color name="light_background_03">#FFFFFF</color>
     <color name="light_primary">@color/fabriik_green</color>
-    <color name="light_secondary">#122348</color>
+    <color name="light_secondary">#3C5346</color>
     <color name="light_tertiary">#EEF4FF</color>
-    <color name="light_text_01">#2E3134</color>
-    <color name="light_text_02">#5F6368</color>
-    <color name="light_text_03">#3C4043</color>
+    <color name="light_text_01">#2B2B28</color>
+    <color name="light_text_02">#666664</color>
+    <color name="light_text_03">#3C5346</color>
     <color name="light_text_04">#71767B</color>
     <color name="light_error">#D72431</color>
     <color name="light_success">#00A86E</color>
@@ -22,7 +22,7 @@
     <color name="light_contrast_02">#FFFFFF</color>
     <color name="light_contrast_03">#FFFFFF</color>
     <color name="light_outline_01">#BDC1C6</color>
-    <color name="light_outline_02">#DADCE0</color>
+    <color name="light_outline_02">#A2A29E</color>
     <color name="light_outline_03">#9AA0A6</color>
     <color name="light_icons_01">#3C4043</color>
     <color name="light_icons_02">#5F6368</color>

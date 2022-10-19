@@ -3,72 +3,85 @@
     <style name="TextStyle" />
 
     <style name="TextStyle.Title1">
-        <item name="android:textSize">36sp</item>
-        <item name="fontFamily">@font/degular_semibold</item>
+        <item name="android:textSize">50sp</item>
+        <item name="fontFamily">@font/sofia_pro_semibold</item>
     </style>
 
     <style name="TextStyle.Title2">
-        <item name="android:textSize">32sp</item>
-        <item name="fontFamily">@font/degular_semibold</item>
+        <item name="android:textSize">42sp</item>
+        <item name="fontFamily">@font/sofia_pro_semibold</item>
     </style>
 
     <style name="TextStyle.Title3">
-        <item name="android:textSize">28sp</item>
-        <item name="fontFamily">@font/degular_semibold</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="fontFamily">@font/sofia_pro_semibold</item>
     </style>
 
     <style name="TextStyle.Title4">
-        <item name="android:textSize">24sp</item>
-        <item name="fontFamily">@font/degular_semibold</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="fontFamily">@font/sofia_pro_semibold</item>
     </style>
 
     <style name="TextStyle.Title5">
-        <item name="android:textSize">20sp</item>
-        <item name="lineHeight">24dp</item>
-        <item name="fontFamily">@font/degular_semibold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="fontFamily">@font/sofia_pro_semibold</item>
     </style>
 
     <style name="TextStyle.Title6">
-        <item name="android:textSize">16sp</item>
-        <item name="android:lineSpacingExtra">4dp</item>
-        <item name="fontFamily">@font/degular_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="fontFamily">@font/sofia_pro_semibold</item>
     </style>
 
     <style name="TextStyle.Subtitle1">
         <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">5sp</item>
         <item name="fontFamily">@font/roboto_medium</item>
     </style>
 
     <style name="TextStyle.Subtitle2">
         <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextStyle.Subtitle3">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
         <item name="fontFamily">@font/roboto_medium</item>
     </style>
 
     <style name="TextStyle.Body1">
         <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">5sp</item>
         <item name="fontFamily">@font/roboto_regular</item>
     </style>
 
     <style name="TextStyle.Body2">
         <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
         <item name="fontFamily">@font/roboto_regular</item>
-        <item name="android:lineSpacingExtra">6dp</item>
     </style>
 
-    <style name="TextStyle.Caption">
+    <style name="TextStyle.Body3">
         <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
         <item name="fontFamily">@font/roboto_regular</item>
     </style>
+
+    <!-- todo: remove Caption -->
+    <style name="TextStyle.Caption" parent="TextStyle.Body3"/>
 
     <style name="TextStyle.Button">
-        <item name="android:textSize">16sp</item>
-        <item name="fontFamily">@font/degular_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
     </style>
 
-    <style name="TextStyle.Overline">
-        <item name="android:textSize">12sp</item>
-        <item name="fontFamily">@font/roboto_regular</item>
-    </style>
+    <!-- todo: remove Overline -->
+    <style name="TextStyle.Overline" parent="TextStyle.Body3"/>
 
     <style name="TextStyle.BottomTab">
         <item name="android:textColor">@color/navigation_menu_item_tint</item>

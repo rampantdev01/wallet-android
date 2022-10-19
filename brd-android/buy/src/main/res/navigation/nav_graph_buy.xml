@@ -28,6 +28,10 @@
                 android:name="currencies"
                 app:argType="string[]" />
 
+            <argument
+                android:name="title"
+                app:argType="string" />
+
         </action>
 
         <action
