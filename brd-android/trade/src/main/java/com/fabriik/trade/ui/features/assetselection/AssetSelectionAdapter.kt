@@ -53,13 +53,8 @@ class AssetSelectionAdapter(private val callback: (AssetSelectionItem) -> Unit) 
                 tvFiatAmount.text = item.fiatBalance
                 tvCryptoAmount.text = item.cryptoBalance
 
-                if (item.enabled) {
-                    setAlpha(binding, 1f)
-                    binding.root.setOnClickListener { callback(item) }
-                } else {
-                    setAlpha(binding, 0.5f)
-                    binding.root.setOnClickListener(null)
-                }
+                setAlpha(binding, if (item.enabled) 1f else 0.5f)
+                binding.root.setOnClickListener { callback(item) }
             }
         }
 
