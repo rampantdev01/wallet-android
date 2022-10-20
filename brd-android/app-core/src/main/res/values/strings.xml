@@ -1269,6 +1269,7 @@ We are sorry to see you go.</string>
     <string name="Swap.CheckAssetsBody">In order to successfully perform a swap, make sure you have two or more of our supported swap assets (BSV, BTC, ETH, BCH, SHIB, USDT) activated and funded within your wallet.</string>
     <!-- Swap details title -->
     <string name="Swap.Details">Swap details</string>
+    <string name="Swap.enableAssetFirst">Asset needs to be enabled first. You can do that by selecting ‘Manage assets’ on the home screen.</string>
     <!-- There was an error while processing your transaction title in failure swap screen -->
     <string name="Swap.ErrorProcessingTransaction">There was an error while processing your transaction</string>
     <!-- Error swap message on Failure screen -->

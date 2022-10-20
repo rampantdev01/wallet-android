@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.annotation.DrawableRes
+import androidx.annotation.StyleRes
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.setPadding
 import com.fabriik.common.R
@@ -18,7 +19,8 @@ object FabriikToastUtil {
         showCustomSnackBar(
             parentView = parentView,
             message = message,
-            background = R.drawable.bg_info_prompt
+            background = R.drawable.bg_info_bubble,
+            textAppearance = R.style.FabriikToastTextAppearance_Info
         )
     }
 
@@ -26,7 +28,8 @@ object FabriikToastUtil {
         showCustomSnackBar(
             parentView = parentView,
             message = message,
-            background = R.drawable.bg_error_bubble
+            background = R.drawable.bg_error_bubble,
+            textAppearance = R.style.FabriikToastTextAppearance_Error
         )
     }
 
@@ -34,12 +37,13 @@ object FabriikToastUtil {
         parentView: View,
         message: String,
         gravity: Int = Gravity.TOP,
-        @DrawableRes background: Int
+        @DrawableRes background: Int,
+        @StyleRes textAppearance: Int,
     ) {
         val view = TextView(parentView.context).apply {
             text = message
             setPadding(16.dp)
-            setTextAppearance(R.style.FabriikToastTextAppearance)
+            setTextAppearance(textAppearance)
         }
 
         val snackBar = Snackbar.make(parentView, "", Snackbar.LENGTH_LONG).apply {

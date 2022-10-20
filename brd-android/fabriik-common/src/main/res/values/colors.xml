@@ -5,8 +5,8 @@
     <!-- Light colors -->
     <color name="light_background_01">#FFFFFF</color>
     <color name="light_background_02">#F1F3F4</color>
-    <color name="light_background_03">#FFFFFF</color>
-    <color name="light_background_cards">#DEE7E3</color>
+    <color name="light_background_03">#DEE7E3</color>
+    <color name="light_background_cards">#FFFFFF</color>
     <color name="light_primary">@color/fabriik_green</color>
     <color name="light_secondary">#3C5346</color>
     <color name="light_tertiary">#EEF4FF</color>

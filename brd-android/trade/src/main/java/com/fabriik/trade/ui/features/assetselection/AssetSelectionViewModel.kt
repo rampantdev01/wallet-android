@@ -4,7 +4,9 @@ import android.app.Application
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.fabriik.common.ui.base.FabriikViewModel
+import com.fabriik.common.utils.getString
 import com.fabriik.common.utils.toBundle
+import com.fabriik.trade.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.kodein.di.KodeinAware
@@ -53,10 +55,16 @@ class AssetSelectionViewModel(
 
     override fun onAssetSelected(asset: AssetSelectionAdapter.AssetSelectionItem) {
         setEffect {
-            AssetSelectionContract.Effect.Back(
-                requestKey = arguments.requestKey,
-                selectedCurrency = asset.cryptoCurrencyCode
-            )
+            if (asset.enabled) {
+                AssetSelectionContract.Effect.Back(
+                    requestKey = arguments.requestKey,
+                    selectedCurrency = asset.cryptoCurrencyCode
+                )
+            } else {
+                AssetSelectionContract.Effect.ShowToast(
+                    getString(R.string.Swap_enableAssetFirst)
+                )
+            }
         }
     }
 
