@@ -62,7 +62,7 @@
 
         <TextView
             android:id="@+id/tv_title_large"
-            style="@style/TextStyle.Title4"
+            style="@style/TextStyle.Title5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"

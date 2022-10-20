@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.addCallback
+import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -348,7 +349,7 @@ class SwapInputFragment : Fragment(),
             btnConfirm.isEnabled = state.confirmButtonEnabled
 
             viewTimer.isVisible = !state.cryptoExchangeRateLoading && state.quoteResponse != null
-            tvRateValue.isVisible = !state.cryptoExchangeRateLoading && state.quoteResponse != null
+            tvRateValue.isInvisible = state.cryptoExchangeRateLoading || state.quoteResponse == null
             quoteLoadingIndicator.isVisible = state.cryptoExchangeRateLoading
 
             content.isVisible = true

@@ -40,7 +40,7 @@ class TimerView @JvmOverloads constructor(
     ) : View(context, attrs, defStyleAttr) {
 
         private var drawingRect = RectF()
-        private val paintColor = ContextCompat.getColor(context, R.color.light_primary)
+        private val paintColor = ContextCompat.getColor(context, R.color.light_secondary)
         private val marginFromBorder = 5.dp.toFloat()
 
         private val paintCircle = Paint().apply {

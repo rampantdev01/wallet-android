@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
+import androidx.core.content.ContextCompat
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.core.view.postDelayed
@@ -32,6 +33,12 @@ class SwapCardView @JvmOverloads constructor(
 
     init {
         radius = 16.dp.toFloat()
+        setContentPadding(0, 0, 0, 0)
+
+        setCardBackgroundColor(
+            ContextCompat.getColor(context, R.color.light_background_cards)
+        )
+
         binding = ViewSwapCardBinding.inflate(
             LayoutInflater.from(context), this, true
         )

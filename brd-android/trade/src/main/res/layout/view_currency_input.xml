@@ -8,14 +8,28 @@
 
     <TextView
         android:id="@+id/tv_title"
-        style="@style/TextStyle.Caption"
+        style="@style/TextStyle.Body3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/light_text_02"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Title" />
+
+    <TextView
+        android:id="@+id/tv_fiat_currency_symbol"
+        style="@style/TextStyle.Subtitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:textColor="@color/light_text_02"
+        android:text="$"
+        app:layout_constraintBottom_toBottomOf="@id/et_fiat_amount"
+        app:layout_constraintEnd_toStartOf="@id/et_fiat_amount"
+        app:layout_constraintTop_toTopOf="@id/et_fiat_amount"
+        tools:ignore="HardcodedText" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_fiat_amount"
@@ -25,8 +39,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:hint="0.00"
-        android:textColor="@color/light_text_01"
-        android:textColorHint="@color/light_text_01"
+        android:textColor="@color/light_text_03"
+        android:textColorHint="@color/light_text_03"
         app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toStartOf="@id/tv_fiat_currency"
         app:layout_constraintHorizontal_bias="1"
@@ -36,10 +50,11 @@
 
     <TextView
         android:id="@+id/tv_fiat_currency"
-        style="@style/TextStyle.Subtitle2"
+        style="@style/TextStyle.Subtitle3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:textColor="@color/light_text_02"
         app:layout_constraintBottom_toBottomOf="@id/et_fiat_amount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/et_fiat_amount"
@@ -70,8 +85,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:hint="0.00"
-        android:textColor="@color/light_text_01"
-        android:textColorHint="@color/light_text_01"
+        android:textColor="@color/light_text_03"
+        android:textColorHint="@color/light_text_03"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="@id/view_currency_selector"
         app:layout_constraintEnd_toEndOf="parent"

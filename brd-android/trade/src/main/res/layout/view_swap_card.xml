@@ -4,28 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
     android:clipToPadding="false"
     android:clipChildren="false">
 
     <TextView
         android:id="@+id/tv_selling_currency_network_fee_title"
-        style="@style/TextStyle.Caption"
+        style="@style/TextStyle.Body3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:gravity="start"
         android:textColor="@color/light_text_02"
         android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/view_input_selling_currency"
         app:layout_constraintTop_toBottomOf="@+id/view_input_selling_currency"
         tools:visibility="visible"
         tools:text="@string/Swap.SendNetworkFee" />
 
     <TextView
         android:id="@+id/tv_selling_currency_network_fee"
-        style="@style/TextStyle.Caption"
+        style="@style/TextStyle.Body3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -33,7 +32,7 @@
         android:gravity="end"
         android:textColor="@color/light_text_02"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/view_input_selling_currency"
         app:layout_constraintTop_toBottomOf="@+id/view_input_selling_currency"
         tools:text="0.00023546 BSV\n$0.01 USD"
         tools:visibility="visible" />
@@ -42,7 +41,7 @@
         android:id="@+id/view_separator"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="@color/light_outline_02"
+        android:background="@color/light_outline_01"
         app:layout_constraintBottom_toBottomOf="@id/btn_swap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,9 +49,10 @@
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_swap"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_swap_currencies"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,31 +61,36 @@
 
     <TextView
         android:id="@+id/tv_buying_currency_network_fee_title"
-        style="@style/TextStyle.Caption"
+        style="@style/TextStyle.Body3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:gravity="start"
         android:textColor="@color/light_text_02"
         android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintStart_toStartOf="@id/view_input_buying_currency"
         app:layout_constraintTop_toBottomOf="@+id/view_input_buying_currency"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:visibility="visible"
         tools:text="@string/Swap.ReceiveNetworkFee" />
 
     <TextView
         android:id="@+id/tv_buying_currency_network_fee"
-        style="@style/TextStyle.Caption"
+        style="@style/TextStyle.Body3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         android:gravity="end"
         android:textColor="@color/light_text_02"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/view_input_buying_currency"
         app:layout_constraintTop_toBottomOf="@+id/view_input_buying_currency"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:text="0.0005 BTC\n$1.51 USD"
         tools:visibility="visible" />
 
@@ -94,15 +99,22 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_swap"
-        app:title="@string/Swap.iWant" />
+        app:layout_constraintBottom_toTopOf="@id/tv_buying_currency_network_fee"
+        app:layout_goneMarginBottom="16dp"
+        app:title="@string/Swap.youReceive" />
 
     <com.fabriik.trade.ui.customview.CurrencyInputView
         android:id="@+id/view_input_selling_currency"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
