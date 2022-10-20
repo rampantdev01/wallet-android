@@ -15,11 +15,12 @@
 
     <TextView
         android:id="@+id/tv_currency"
-        style="@style/TextStyle.Title4"
+        style="@style/TextStyle.Title5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:textAllCaps="true"
+        android:textColor="@color/light_text_03"
         tools:text="BTC" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -30,6 +31,6 @@
         android:adjustViewBounds="true"
         android:layout_marginStart="10dp"
         android:src="@drawable/ic_chevron_down"
-        android:tint="@color/light_primary"/>
+        android:tint="@color/light_text_03"/>
 
 </merge>

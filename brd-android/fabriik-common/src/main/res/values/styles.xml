@@ -83,6 +83,7 @@
         <item name="paddingEnd">16dp</item>
         <item name="paddingStart">16dp</item>
         <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/light_text_01</item>
         <item name="fontFamily">@font/roboto_regular</item>
     </style>
 
