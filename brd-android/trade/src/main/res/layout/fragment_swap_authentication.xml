@@ -11,15 +11,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:titleType="none" />
+        app:titleType="none"
+        app:showBack="false"/>
 
     <TextView
         android:id="@+id/tv_title"
-        style="@style/TextStyle.Title5"
+        style="@style/TextStyle.Title6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:text="@string/UpdatePin.enterYourPin"
+        android:text="@string/VerifyPin.title"
+        android:textColor="@color/light_text_03"
         app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +35,8 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="@string/UpdatePin.EnterPin"
+        android:text="@string/VerifyPin.continueBody"
+        android:textColor="@color/light_text_02"
         app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

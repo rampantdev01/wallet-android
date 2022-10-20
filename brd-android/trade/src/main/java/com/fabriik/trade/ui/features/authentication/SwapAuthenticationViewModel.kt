@@ -32,12 +32,8 @@ class SwapAuthenticationViewModel(
         )
     }
 
-    override fun onBackClicked() {
-        setEffect { SwapAuthenticationContract.Effect.Back(RESULT_KEY_CANCELED) }
-    }
-
     override fun onDismissClicked() {
-        setEffect { SwapAuthenticationContract.Effect.Dismiss }
+        setEffect { SwapAuthenticationContract.Effect.Back(RESULT_KEY_CANCELED) }
     }
 
     override fun onPinValidated(valid: Boolean) {

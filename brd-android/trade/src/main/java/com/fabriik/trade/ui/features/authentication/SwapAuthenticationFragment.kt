@@ -39,10 +39,6 @@ class SwapAuthenticationFragment : Fragment(),
         binding = FragmentSwapAuthenticationBinding.bind(view)
 
         with (binding) {
-            toolbar.setBackButtonClickListener {
-                viewModel.setEvent(SwapAuthenticationContract.Event.BackClicked)
-            }
-
             toolbar.setDismissButtonClickListener {
                 viewModel.setEvent(SwapAuthenticationContract.Event.DismissClicked)
             }
@@ -123,9 +119,6 @@ class SwapAuthenticationFragment : Fragment(),
 
     override fun handleEffect(effect: SwapAuthenticationContract.Effect) {
         when (effect) {
-            SwapAuthenticationContract.Effect.Dismiss ->
-                requireActivity().finish()
-
             SwapAuthenticationContract.Effect.ShakeError -> {
                 binding.pinLayout.resetPin()
                 SpringAnimator.failShakeAnimation(requireContext(), binding.pinLayout)
