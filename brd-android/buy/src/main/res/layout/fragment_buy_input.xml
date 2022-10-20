@@ -29,27 +29,16 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/tv_rate_title"
-                    style="@style/TextStyle.Subtitle2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/Swap.Rate"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
                     android:id="@+id/tv_rate_value"
                     style="@style/TextStyle.Body2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
                     android:textAllCaps="true"
-                    app:layout_constraintBaseline_toBaselineOf="@id/tv_rate_title"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0"
-                    app:layout_constraintStart_toEndOf="@id/tv_rate_title"
+                    app:layout_constraintStart_toStartOf="parent"
                     tools:text="1 BSV = 0.0000333 BTC" />
 
                 <androidx.core.widget.ContentLoadingProgressBar
@@ -57,25 +46,10 @@
                     style="?android:attr/progressBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:textColor="@color/light_primary"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_rate_title"
-                    app:layout_constraintStart_toEndOf="@id/tv_rate_title"
-                    app:layout_constraintTop_toTopOf="@id/tv_rate_title" />
-
-                <TextView
-                    android:id="@+id/tv_limits_disclaimer"
-                    style="@style/TextStyle.Caption"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constrainedWidth="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_rate_title"
-                    tools:text="@string/Buy.BuyLimits" />
+                    app:layout_constraintBottom_toBottomOf="@id/tv_rate_value"
+                    app:layout_constraintStart_toStartOf="@id/tv_rate_value"
+                    app:layout_constraintTop_toTopOf="@id/tv_rate_value" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_crypto_input"
@@ -84,9 +58,10 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
+                    app:contentPadding="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_limits_disclaimer">
+                    app:layout_constraintTop_toBottomOf="@id/tv_rate_value">
 
                     <com.fabriik.trade.ui.customview.CurrencyInputView
                         android:id="@+id/view_crypto_input"
@@ -101,7 +76,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     app:contentPadding="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -114,10 +89,11 @@
 
                         <TextView
                             android:id="@+id/tv_pay_with"
-                            style="@style/TextStyle.Caption"
+                            style="@style/TextStyle.Body3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/Buy.PayWith"
+                            android:textColor="@color/light_text_02"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -126,8 +102,9 @@
                             style="@style/TextStyle.Subtitle2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="14dp"
+                            android:layout_marginTop="8dp"
                             android:text="@string/Buy.SelectPaymentMethod"
+                            android:textColor="@color/light_text_01"
                             app:layout_constrainedWidth="true"
                             app:layout_constraintEnd_toStartOf="@+id/iv_chevron"
                             app:layout_constraintHorizontal_bias="0"
@@ -149,7 +126,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_fabriik_chevron_right"
-                            android:tint="@color/light_primary"
+                            android:tint="@color/light_text_03"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -159,21 +136,19 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <TextView
-                    android:id="@+id/tv_error"
-                    style="@style/TextStyle.Body2"
-                    android:layout_width="0dp"
+                    android:id="@+id/tv_limits_disclaimer"
+                    style="@style/TextStyle.Body3"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="24dp"
-                    android:background="@drawable/bg_swap_error"
-                    android:padding="20dp"
-                    android:textColor="@color/light_error"
-                    android:visibility="gone"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/light_text_02"
+                    app:layout_constrainedWidth="true"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cv_payment_method"
-                    tools:text="This is a error message"
-                    tools:visibility="visible" />
+                    tools:text="@string/Buy.BuyLimits" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_continue"
@@ -184,7 +159,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_error"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_limits_disclaimer"
                     app:layout_constraintVertical_bias="1" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
