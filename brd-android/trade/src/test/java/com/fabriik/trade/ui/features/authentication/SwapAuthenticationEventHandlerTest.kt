@@ -10,17 +10,10 @@ import org.mockito.junit.MockitoJUnitRunner
 class SwapAuthenticationEventHandlerTest {
 
     @Spy val handler = object : SwapAuthenticationEventHandler {
-        override fun onBackClicked() {}
         override fun onDismissClicked() {}
         override fun onAuthSucceeded() {}
         override fun onAuthFailed(errorCode: Int) {}
         override fun onPinValidated(valid: Boolean) {}
-    }
-
-    @Test
-    fun handleEvent_backClicked_callOnBackClicked() {
-        handler.handleEvent(SwapAuthenticationContract.Event.BackClicked)
-        verify(handler).onBackClicked()
     }
 
     @Test
