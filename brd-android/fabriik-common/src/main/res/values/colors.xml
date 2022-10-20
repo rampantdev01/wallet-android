@@ -6,6 +6,7 @@
     <color name="light_background_01">#FFFFFF</color>
     <color name="light_background_02">#F1F3F4</color>
     <color name="light_background_03">#FFFFFF</color>
+    <color name="light_background_cards">#FFFFFF</color>
     <color name="light_primary">@color/fabriik_green</color>
     <color name="light_secondary">#3C5346</color>
     <color name="light_tertiary">#EEF4FF</color>
@@ -14,6 +15,7 @@
     <color name="light_text_03">#3C5346</color>
     <color name="light_text_04">#71767B</color>
     <color name="light_error">#D72431</color>
+    <color name="light_error_1">#D5554E</color>
     <color name="light_success">#00A86E</color>
     <color name="light_pending">#F8BA37</color>
     <color name="light_link_01">#122348</color>
@@ -41,12 +43,13 @@
     <color name="light_inverse_outline_03">#9AA0A6</color>
     <color name="light_inverse_icons_01">#FFFFFF</color>
     <color name="light_inverse_icons_02">#DADCE0</color>
+    <color name="light_disabled_02">#C7C7C5</color>
 
     <!-- Interaction colors -->
-    <color name="light_interaction_primary_hover">#0861FF</color>
-    <color name="light_interaction_primary_pressed">#0053E7</color>
-    <color name="light_interaction_primary_selected">#0053E7</color>
-    <color name="light_interaction_primary_focused">#2C78FF</color>
-    <color name="light_interaction_primary_disabled">#9AA0A6</color>
+    <color name="light_interaction_primary_hover">#559085</color>
+    <color name="light_interaction_primary_pressed">#559085</color>
+    <color name="light_interaction_primary_selected">#559085</color>
+    <color name="light_interaction_primary_focused">#6EAEA1</color>
+    <color name="light_interaction_primary_disabled">@color/light_disabled_02</color>
     <color name="light_interaction_listing_hover">#F1F3F4</color>
 </resources>

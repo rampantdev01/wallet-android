@@ -13,6 +13,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:padding="4dp"
         android:src="@drawable/ic_fabriik_dialog_close"
+        android:tint="@color/light_text_03"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,11 +29,11 @@
 
     <TextView
         android:id="@+id/tv_title"
-        style="@style/TextStyle.Title5"
+        style="@style/TextStyle.Title6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textColor="@color/light_text_01"
+        android:textColor="@color/light_text_03"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_icon"
@@ -40,12 +41,11 @@
 
     <TextView
         android:id="@+id/tv_description"
-        style="@style/TextStyle.Body1"
+        style="@style/TextStyle.Body2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textColor="@color/light_text_01"
-        android:lineSpacingExtra="5sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title"

@@ -18,6 +18,7 @@ import com.fabriik.buy.databinding.FragmentPaymentProcessingBinding
 import com.fabriik.common.data.FabriikApiConstants
 import com.fabriik.common.ui.base.FabriikView
 import com.fabriik.common.utils.FabriikToastUtil
+import com.fabriik.common.utils.underline
 import kotlinx.coroutines.flow.collect
 
 class PaymentProcessingFragment : Fragment(),
@@ -107,6 +108,8 @@ class PaymentProcessingFragment : Fragment(),
             btnContactSupport.isVisible = true
             btnPurchaseDetails.isVisible = false
             btnDifferentMethod.isVisible = true
+
+            btnContactSupport.underline()
         }
     }
 
@@ -123,6 +126,8 @@ class PaymentProcessingFragment : Fragment(),
             btnContactSupport.isVisible = false
             btnPurchaseDetails.isVisible = true
             btnDifferentMethod.isVisible = false
+
+            btnPurchaseDetails.underline()
         }
     }
 
