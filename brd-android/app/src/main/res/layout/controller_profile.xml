@@ -43,7 +43,7 @@
 
         <TextView
             android:id="@+id/tv_profile_name"
-            style="@style/TextStyle.Title4"
+            style="@style/TextStyle.Title5"
             android:layout_width="match_parent"
             android:layout_height="28dp"
             android:layout_marginTop="10dp"
@@ -52,7 +52,7 @@
             android:autoSizeTextType="uniform"
             android:gravity="center"
             android:paddingHorizontal="16dp"
-            android:textColor="@color/light_text_01"
+            android:textColor="@color/light_secondary"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toStartOf="@id/btn_change_email"
             app:layout_constraintHorizontal_chainStyle="packed"

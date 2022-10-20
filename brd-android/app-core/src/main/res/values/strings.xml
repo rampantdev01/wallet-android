@@ -53,7 +53,7 @@ We are sorry to see you go.</string>
     <!-- Delete account explanation title -->
     <string name="AccountDelete.DeleteWhatMean">What does this mean?</string>
     <!-- Delete account explanation part one -->
-    <string name="AccountDelete.ExplanationOne">-You will no longer be able to use your email to sign in into RockWallet Wallet</string>
+    <string name="AccountDelete.ExplanationOne">-You will no longer be able to use your email to sign in into RockWallet</string>
     <!-- Delete account explanation part three -->
     <string name="AccountDelete.ExplanationThree">-Your private keys are still yours, keep your security phrase in a safe place in case you need to restore your wallet.</string>
     <!-- Delete account explanation part two -->
@@ -570,13 +570,13 @@ We are sorry to see you go.</string>
     <!-- Caption for graphics -->
     <string name="Import.leftCaption">Wallet to be imported</string>
     <!-- Import wallet intro screen message -->
-    <string name="Import.message">Importing a wallet transfers all the money from your other wallet into your RockWallet wallet using a single transaction.</string>
+    <string name="Import.message">Importing a wallet transfers all the money from your other wallet into your RockWallet using a single transaction.</string>
     <!-- Enter password alert view title -->
     <string name="Import.password">This private key is password protected.</string>
     <!-- password textfield placeholder -->
     <string name="Import.passwordPlaceholder">password</string>
     <!-- Caption for graphics -->
-    <string name="Import.rightCaption">Your RockWallet Wallet</string>
+    <string name="Import.rightCaption">Your RockWallet</string>
     <!-- Scan Private key button label -->
     <string name="Import.scan">Scan Private Key</string>
     <!-- Import wallet success alert title -->
@@ -907,7 +907,7 @@ We are sorry to see you go.</string>
     <!-- Title for the success page after the recovery phrase has been set up -->
     <string name="RecoveryKeyFlow.successHeading">Congratulations! You completed your recovery phrase setup.</string>
     <!-- Subtitle for the success page after the recovery key has been set up -->
-    <string name="RecoveryKeyFlow.successSubheading">You\'re all set to deposit, trade, and buy crypto from your RockWallet wallet.</string>
+    <string name="RecoveryKeyFlow.successSubheading">You\'re all set to deposit, trade, and buy crypto from your RockWallet.</string>
     <!-- Title displayed to the user on the intro screen when unlinking a wallet -->
     <string name="RecoveryKeyFlow.unlinkWallet">Unlink your wallet from this device.</string>
     <!-- Subtitle displayed to the user on the intro screen when unlinking a wallet. -->
@@ -1588,7 +1588,7 @@ We are sorry to see you go.</string>
     <!-- Contact Support button on update pin view -->
     <string name="UpdatePin.ContactSupport">Contact Support</string>
     <!-- PIN creation info. -->
-    <string name="UpdatePin.createInstruction">Your PIN will be used to unlock your RockWallet Wallet and send money</string>
+    <string name="UpdatePin.createInstruction">Your PIN will be used to unlock your RockWallet and send money</string>
     <!-- Update PIN title -->
     <string name="UpdatePin.createTitle">Set PIN</string>
     <!-- Update PIN title -->
@@ -1624,7 +1624,7 @@ We are sorry to see you go.</string>
     <!-- Number of attempts left on pin entry screen -->
     <string name="UpdatePin.TwoAttempts">2 more failed attempts.</string>
     <!-- Update pin popup explanation when pressing "?" button -->
-    <string name="UpdatePin.UpdatePinPopup">The RockWallet Wallet app requires you to set a PIN to secure your wallet, separate from your device passcode.
+    <string name="UpdatePin.UpdatePinPopup">The RockWallet app requires you to set a PIN to secure your wallet, separate from your device passcode.
 
 You will be required to enter the PIN to view your balance or send money, which keeps your wallet private even if you let someone use your phone or if your phone is stolen by someone who knows your device passcode.
 
@@ -1756,7 +1756,7 @@ Do not forget your wallet PIN! It can only be reset by using your Recovery Phras
     <!-- Enter phrase to wipe wallet instruction. (Important to explain it is the CURRENT [this wallet's] paper key that needs to be entered). -->
     <string name="WipeWallet.instruction">Please enter your recovery phrase to wipe this wallet from your device.</string>
     <!-- Instructions for unlinking the wallet -->
-    <string name="WipeWallet.startMessage">Starting or recovering another wallet allows you to access and manage a different RockWallet wallet on this device.</string>
+    <string name="WipeWallet.startMessage">Starting or recovering another wallet allows you to access and manage a different RockWallet on this device.</string>
     <!-- Start wipe wallet view warning -->
     <string name="WipeWallet.startWarning">Your current wallet will be removed from this device. If you wish to restore it in the future, you will need to enter your Recovery Phrase.</string>
     <!-- Unlink this wallet from this device. -->
@@ -1789,7 +1789,7 @@ Do not forget your wallet PIN! It can only be reset by using your Recovery Phras
     <string name="Profile.InfoDialog.description">If you verify your account, you are given access to:\n\t\u2022 Unlimited deposits/withdrawals\n\t\u2022 Enhanced security\n\t\u2022 Full asset support\n\t\u2022 Buy assets with credit card\n\t\u2022 24/7/365 live customer support</string>
 
     <!-- Verify account screen -->
-    <string name="VerifyAccount.Title">Verify your account to get full access to your RockWallet wallet!</string>
+    <string name="VerifyAccount.Title">Verify your account to get full access to your RockWallet!</string>
     <string name="VerifyAccount.Subtitle">We need to verify your identity in order to buy/sell and swap crypto.</string>
     <string name="VerifyAccount.Button">Verify your account</string>
 
@@ -1802,7 +1802,7 @@ Do not forget your wallet PIN! It can only be reset by using your Recovery Phras
     <string name="ResetPin.title">Reset PIN</string>
     <string name="ResetPin.subtitleNewPin">Set your new PIN</string>
     <string name="ResetPin.subtitleConfirmNewPin">Confirm your new PIN</string>
-    <string name="ResetPin.description">Your PIN will be used to unlock your RockWallet Wallet and send money</string>
+    <string name="ResetPin.description">Your PIN will be used to unlock your RockWallet and send money</string>
 
     <!-- Pin reset completed screen -->
     <string name="PinResetCompleted.title">Your PIN was reset successfully!</string>
@@ -1814,6 +1814,6 @@ Do not forget your wallet PIN! It can only be reset by using your Recovery Phras
     </plurals>
 
     <!-- Home screen verify dialog -->
-    <string name="HomeScreen.VerifyDialog.Title">Get full access to your RockWallet wallet!</string>
+    <string name="HomeScreen.VerifyDialog.Title">Get full access to your RockWallet!</string>
 
 </resources>

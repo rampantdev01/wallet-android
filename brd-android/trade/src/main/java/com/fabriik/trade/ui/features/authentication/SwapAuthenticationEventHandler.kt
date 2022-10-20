@@ -6,15 +6,12 @@ interface SwapAuthenticationEventHandler: FabriikEventHandler<SwapAuthentication
 
     override fun handleEvent(event: SwapAuthenticationContract.Event) {
         return when (event) {
-            is SwapAuthenticationContract.Event.BackClicked -> onBackClicked()
             is SwapAuthenticationContract.Event.DismissClicked -> onDismissClicked()
             is SwapAuthenticationContract.Event.AuthSucceeded -> onAuthSucceeded()
             is SwapAuthenticationContract.Event.AuthFailed -> onAuthFailed(event.errorCode)
             is SwapAuthenticationContract.Event.PinValidated -> onPinValidated(event.valid)
         }
     }
-
-    fun onBackClicked()
 
     fun onDismissClicked()
 
