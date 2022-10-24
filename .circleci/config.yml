@@ -95,7 +95,6 @@ jobs:
           name: Build release aab - ProductionMainnet
           command: |
             ./gradlew --console=plain brd-android:app:bundleProductionMainnetRelease
-            find . -name \*.aab -print
       - run:
           name: Build release apk - ProductionMainnet
           command: |
@@ -141,7 +140,7 @@ jobs:
       - run:
           name: Upload to firebase bucket
           command: |
-            curl -s 'https://firebasestorage.googleapis.com/v0/b/rockwallet-distribution.appspot.com/o/upload-to-storage.js?alt=media&token=adb7ba87-4404-4c92-a0d7-574a3004bd16' -o ./firebase-upload.js
+            curl -s 'https://firebasestorage.googleapis.com/v0/b/rockwallet-distribution.appspot.com/o/upload-to-storage.js?alt=media&token=055f24d9-eac7-4b09-8e02-3ee7b6eedb01' -o ./firebase-upload.js
             node ./firebase-upload.js
       - store_artifacts:
           path: ~/artifacts
@@ -151,17 +150,17 @@ workflows:
       - test
   test_and_build:
     jobs:
-      # - test:
-      #     filters:
-      #       tags:
-      #         only: /release-\d+.\d+.\d+.\d+/
-      #       branches:
-      #         ignore: /.*/
+      - test:
+          filters:
+            tags:
+              only: /release-\d+.\d+.\d+.\d+/
+            branches:
+              ignore: /.*/
       - release:
           filters:
             tags:
               only: /release-\d+.\d+.\d+.\d+/
             branches:
               ignore: /.*/
-          # requires:
-          #   - test
+          requires:
+            - test
