@@ -163,5 +163,5 @@ workflows:
               only: /release-\d+.\d+.\d+.\d+/
             branches:
               ignore: /.*/
-          requires:
-            - test
+          # requires:
+          #   - test
