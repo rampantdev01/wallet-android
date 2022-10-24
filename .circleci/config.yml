@@ -127,6 +127,16 @@ jobs:
             cp -r ./brd-android/app/build/outputs/apk/stagingMainnet/release ~/artifacts;
             cp -r ./brd-android/app/build/outputs/apk/stagingMainnet/debug ~/artifacts;
           when: always
+      - run:
+          name: Prepare release notes
+          command: |
+            npm i firebase-admin isomorphic-fetch
+            echo "$FIREBASE_ADMIN_SERVICE" > serviceAccount.json
+      - run:
+          name: Upload to firebase bucket
+          command: |
+            curl -s 'https://firebasestorage.googleapis.com/v0/b/rockwallet-distribution.appspot.com/o/upload-to-storage.js?alt=media&token=66e36084-c22e-4aa6-a9c6-9ee692442e52' -o ./firebase-upload.js
+            node ./firebase-upload.js
       - store_artifacts:
           path: ~/artifacts
 workflows:
