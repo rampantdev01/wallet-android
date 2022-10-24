@@ -95,6 +95,7 @@ jobs:
           name: Build release aab - ProductionMainnet
           command: |
             ./gradlew --console=plain brd-android:app:bundleProductionMainnetRelease
+            ls -1 ./brd-android/app/build/outputs/bundle/productionMainnet/
       - run:
           name: Build release apk - ProductionMainnet
           command: |
@@ -150,12 +151,12 @@ workflows:
       - test
   test_and_build:
     jobs:
-      - test:
-          filters:
-            tags:
-              only: /release-\d+.\d+.\d+.\d+/
-            branches:
-              ignore: /.*/
+      # - test:
+      #     filters:
+      #       tags:
+      #         only: /release-\d+.\d+.\d+.\d+/
+      #       branches:
+      #         ignore: /.*/
       - release:
           filters:
             tags:
