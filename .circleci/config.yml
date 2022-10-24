@@ -95,7 +95,7 @@ jobs:
           name: Build release aab - ProductionMainnet
           command: |
             ./gradlew --console=plain brd-android:app:bundleProductionMainnetRelease
-            ls -1 ./brd-android/app/build/outputs/bundle/productionMainnet/
+            find . -name \*.aab -print
       - run:
           name: Build release apk - ProductionMainnet
           command: |
