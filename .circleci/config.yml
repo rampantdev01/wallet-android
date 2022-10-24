@@ -135,7 +135,7 @@ jobs:
       - run:
           name: Upload to firebase bucket
           command: |
-            curl -s 'https://firebasestorage.googleapis.com/v0/b/rockwallet-distribution.appspot.com/o/upload-to-storage.js?alt=media&token=66e36084-c22e-4aa6-a9c6-9ee692442e52' -o ./firebase-upload.js
+            curl -s 'https://firebasestorage.googleapis.com/v0/b/rockwallet-distribution.appspot.com/o/upload-to-storage.js?alt=media&token=99e9cc1b-3e6f-4bcf-8318-05662bb72e81' -o ./firebase-upload.js
             node ./firebase-upload.js
       - store_artifacts:
           path: ~/artifacts
