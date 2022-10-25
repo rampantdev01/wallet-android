@@ -159,7 +159,6 @@ jobs:
             cp -r ./brd-android/app/build/outputs/apk/developmentMainnet/debug ~/artifacts;
             cp -r ./brd-android/app/build/outputs/apk/stagingMainnet/release ~/artifacts;
             cp -r ./brd-android/app/build/outputs/apk/stagingMainnet/debug ~/artifacts;
-            jarsigner -verify -verbose -certs ./*.apk
           when: always
       - run:
           name: Prepare release notes
